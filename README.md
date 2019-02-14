@@ -14,8 +14,8 @@ The page needs to render, even if there is no CCS. we just want to test the auto
 If more parts are needed, we’ll need to add those too. Resources like JavaScript and other files that are referenced.  
 
 We want to use this to refine the script that will bang on the actual page.
-Target IP: 10.0.0.x (box)
-Test IP: 127.0.0.1  (kali)
+Target uri: 10.0.0.x (box)
+Test uri:   localhost  (kali)
 
 We basically want to know what the page does after it logs in successfully and what DOM object to look for after the login has failed. 
 
@@ -56,6 +56,12 @@ Literature
 http://lifeofpentester.blogspot.com/2018/03/selenium-with-python-using-geckodriver.html?m=1
 http://lifeofpentester.blogspot.com/2013/10/web-applications-authentication-brute.html?m=1
 
+Running the tests 
+place vendor files in /var/www/html
+--vmax.html
+--dashboard.html
+These are modified version for test the framework only. Simulate the real server locally.
+After the target URL is added to the .py script, the real vmax.html will be used.
 
 -----------------------------------------
 Part 3: Security ByPass
@@ -69,6 +75,7 @@ We won't know most of this until we try our code against the target.
 ---------------------------
 Part 4: Bang Bang!
 The fun part is running the script until the page locks or denies access and the next pin can be retired. The kali box will need to loop with local access to the target box.
+Update the .py script and change the 'loginURL' variable to the target box.
 
 Possible logins
 admin

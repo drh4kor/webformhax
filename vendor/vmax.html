@@ -1,0 +1,193 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="template/webViewer.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" src="template/webagent.js"></script>
+<script language="JavaScript" src="template/webViewer_ui.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+	function login_init() {
+		//var frm = document.login_wconf;
+		//frm.login_id.focus();
+	}
+	function onkeypress()
+	{
+		//auto_submit();	
+	}
+	function auto_submit()
+	{
+		//fake server auth
+		var frm = document.login_wconf;		
+		console.log("submit_click");		
+		if(frm.login_pwd.value=="0010"){
+			console.log("right pasword");
+			frm.submit();
+		}
+		else
+		{
+			console.log("wrong pasword");
+		}
+	}
+
+	function check_form()
+	{
+		//var frm = document.login_wconf;
+		//if ((trim(frm.login_pwd.value) != "") && isNaN(trim(frm.login_pwd.value))) {
+			//alert("Password must be a combination of numbers.");
+		//	console.log("validation failed");
+		//	return;
+		//}
+		//frm.submit();
+
+	}
+	function check_enter()
+	{
+		//if(event.keyCode == '13') check_form();
+	}
+
+</script>
+<title>WebViewer Login</title>
+</head>
+
+<body onload="login_init();">
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+	<tbody><tr>
+		<td align="center" valign="middle">
+			<table width="444" height="313" border="0" cellspacing="0" cellpadding="0">
+				<tbody><tr>
+					<td height="15" width="414" background="../img/bg_login_t.gif"></td>
+				</tr>
+				<tr>
+					<td height="275" align="center" valign="top" background="../img/bg_login_m.gif">
+						<table border="0" cellspacing="0" cellpadding="0">
+							<tbody><tr>
+								<td height="10"></td>
+							</tr>
+							<tr>
+								<td align="center">
+									<table border="0" cellspacing="0" cellpadding="0" width="424" height="42" background="../img/bg_login_head.gif">
+										<tbody><tr>
+											<td width="10"></td>
+											<td><img src="../img/logo_Vmax.gif" border="0"></td>
+										</tr>
+									</tbody></table>
+								</td>
+							</tr>
+							<tr>
+								<td height="8"></td>
+							</tr>
+							<tr>
+								<td align="center">
+									<table border="0" cellspacing="0" cellpadding="0">
+										<tbody><tr>
+											<td class="tdDivTL"></td>
+											<td width="404" class="tdDivTC"></td>
+											<td class="tdDivTR"></td>
+										</tr>
+										<tr>
+											<td height="135" class="tdDivML"></td>
+											<td class="tdDivMC">
+												<table border="0" cellspacing="0" cellpadding="0">
+													<tbody><tr>
+														<td width="142" height="19" align="left">
+															<table border="0" cellspacing="0" cellpadding="0">
+																<tbody><tr>
+																	<td width="61" height="19"></td>
+																	<td class="txtDivHead">WEB LOGIN</td>
+																</tr>
+															</tbody></table>
+													  </td>
+													</tr>
+													<tr>
+														<td height="74">
+															<table border="0" cellspacing="0" cellpadding="0">
+																<tbody><tr>
+																	<td><img src="../img/bg_gbLogin_tl.gif" border="0"></td>
+																	<td width="270" class="tdGbTC"></td>
+																	<td class="tdGbTR"></td>
+																</tr>
+																<tr>
+																	<td><img src="../img/bg_gbLogin_ml.gif" border="0"></td>
+																	<td class="tdGbMC" valign="middle" align="center">
+																		<table border="0" cellspacing="0" cellpadding="0">
+																		<form id="login_wconf" name="login_wconf" method="post" action="dashboard.html">
+																		<input type="hidden" name="login_type" value="1">
+																			<tbody>
+																			<tr>
+																				<td width="90" class="txtDivGb" align="right">User ID</td>
+																				<td width="12"></td>
+																				<td><input id="login_id" name="login_id" type="text" class="inputLogin" size="16" maxlength="16"></td>
+																			</tr>
+																			<tr>
+																				<td colspan="3" height="8"></td>
+																			</tr>
+																			<tr>
+																				<td class="txtDivGb" align="right">Password</td>
+																				<td width="12"></td>
+																				<td><input id="login_pwd" name="login_pwd" type="" class="inputLogin" size="16" onkeypress="check_enter()" maxlength="12"></td>
+																			</tr>
+																			<tr>
+																				<td colspan="3" height="8"></td>
+																			</tr>
+																			<tr>
+																				<td colspan="2"></td>
+																				<td align="left">
+																					<table border="0" cellspacing="1" cellpadding="0" bgcolor="#a2a2a2">
+																						<tbody><tr>
+																							<td><a onfocus="blur()" onclick="auto_submit()">Login</div></a></td>
+																						</tr>
+																					</tbody></table>
+																				</td>
+																			</tr>
+																		
+																			</tbody>
+																		</form>
+																		</table>
+																	</td>
+																	<td class="tdGbMR"></td>
+																</tr>
+																<tr>
+																	<td><img src="../img/bg_gbLogin_bl.gif" border="0"></td>
+																	<td class="tdGbBC"></td>
+																	<td class="tdGbBR"></td>
+																</tr>
+															</tbody></table>
+														</td>
+													</tr>
+												</tbody></table>
+											</td>
+											<td class="tdDivMR"></td>
+										</tr>
+										<tr>
+											<td class="tdDivBL"></td>
+											<td class="tdDivBC"></td>
+											<td class="tdDivBR"></td>
+										</tr>
+									</tbody></table>
+								</td>
+							</tr>
+							<tr>
+								<td height="50" valign="bottom">
+									<table border="0" cellspacing="0" cellpadding="0">
+										<tbody><tr>
+											<td width="83"></td>
+											<td><font style="font-size:12px; color:#555555; font-weight:bold;">For Security reasons only authorized users are allowed to access to the web server.</font></td>
+											<td width="15"></td>
+										</tr>
+									</tbody></table>
+								</td>
+							</tr>
+						</tbody></table>
+					</td>
+				</tr>
+				<tr>
+					<td height="15" background="../img/bg_login_b.gif"></td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+
+
+
+</body>
+
+
