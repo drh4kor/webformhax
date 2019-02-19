@@ -7,13 +7,13 @@ from selenium import webdriver
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 
 #set variables
-loginURL='http://localhost/vmax.html'
+loginURL='http://10.10.1.20/cgi-bin/login.cgi'
 binaryPath='/usr/bin/firefox'
 #create object
 binary = FirefoxBinary(binaryPath)
 #create browser
 driver = webdriver.Firefox(firefox_binary=binary)
-driver.implicitly_wait(10)
+driver.implicitly_wait(60)
 
 #navigate to log in page
 driver.get(loginURL)
