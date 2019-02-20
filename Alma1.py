@@ -54,13 +54,17 @@ for x in range(0, max_value):
     #simulate click on the faux button
     inputElement_link.click()    
     #get the url from the page loaded
-    newURL = driver.current_url
-    print newURL;
-    #check if it's NOT the same
-    if newURL != currentURL: 
-	#todo: write to log the test value that passed
-	print "SCORE!"
-        #gtfo
-        break	
+#    newURL = driver.current_url
+    driver.implicitly_wait(30)
+    print driver.current_url;
+    currentURL="http://10.10.1.20/cgi-bin/login_proc.cgi"
+    driver.get(currentURL)
+
+#    #check if it's NOT the same
+#    if currentURL != currentURL: 
+#	#todo: write to log the test value that passed
+#	print "SCORE!"
+#        #gtfo
+#        break	
 #cleanup time
 driver.close()
