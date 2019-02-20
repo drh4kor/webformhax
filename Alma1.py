@@ -40,7 +40,9 @@ currentURL=driver.current_url
 for x in range(0, max_value):
     #debug;show the counter
     print "Loop count %04d" % (x)
-    #clear boxe
+    #gets the page after refresh
+    driver.getURL(loginURL)
+    #clear box
     inputElement_psw.clear()
     #todo: format x into '%3d'
     #simulate keys into the textbox
